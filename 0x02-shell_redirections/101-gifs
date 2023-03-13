@@ -1,3 +1,4 @@
 #!/bin/bash
-find . -type f -iname '*.gif' -printf '%f\0' | sort -zf -f | tr '\0' '\n'; echo
+find . -type f -iname '*.gif' -printf '%f\0' | sort -zf -f | tr '\0' '\n' | awk '{print}' ORS='\n'
+
 
